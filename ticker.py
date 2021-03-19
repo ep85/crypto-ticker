@@ -109,14 +109,16 @@ class Ticker(Frame):
         #     font_price.LoadFont('fonts/5x8.bdf')
 
         # Draw the elements on the canvas
-        print(asset['price'])
-        asset['price'] = asset['price'].replace(",", ".")
-        asset['price'] = asset['price'][:5] + 'k'
-        graphics.DrawText(canvas, font_symbol, 0, 5, main_color, asset['symbol'])
-        graphics.DrawText(canvas, font_price, 0, 16, change_color, asset['price'])
-        graphics.DrawText(
-            canvas, font_change, 10, 5, change_color, asset['change_24h']
-        )
+        price_text = asset["price"]
+        crypto_symbol = asset["symbol"]
+        crypto_symbol = crypto_symbol.upper()
+        price_text = price_text.replace(",", ".")
+        price_text = price_text[:5] + ' k'
+        graphics.DrawText(canvas, font_symbol, 0, 5, main_color, crypto_symbol)
+        graphics.DrawText(canvas, font_price, 0, 16, change_color, price_text)
+        # graphics.DrawText(
+        #     canvas, font_change, 10, 5, change_color, asset['change_24h']
+        # )
 
         return canvas
 
