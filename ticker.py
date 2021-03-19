@@ -105,8 +105,8 @@ class Ticker(Frame):
         )
 
         # Load a smaller font to andle 6-figure asset prices
-        if len(asset['price']) > 10:
-            font_price.LoadFont('fonts/5x8.bdf')
+        # if len(asset['price']) > 10:
+        #     font_price.LoadFont('fonts/5x8.bdf')
 
         # Draw the elements on the canvas
         graphics.DrawText(canvas, font_symbol, 0, 5, main_color, asset['symbol'])
