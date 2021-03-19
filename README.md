@@ -1,4 +1,4 @@
-# forked this branch to make it work for a smaller LED 16X32
+# Forked this branch to make it work for a smaller LED 16X32
 
 # Crypto Ticker
 
