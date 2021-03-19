@@ -1,3 +1,5 @@
+#forked this branch to make it work for a smaller LED 16X32
+
 # Crypto Ticker
 
 A library for displaying crypto asset prices on an LED matrix panel using a Raspberry Pi.
