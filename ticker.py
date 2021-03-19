@@ -112,8 +112,8 @@ class Ticker(Frame):
         price_text = asset["price"]
         crypto_symbol = asset["symbol"]
         crypto_symbol = crypto_symbol.upper()
-        price_text = price_text.replace(",", ".")
-        price_text = price_text[:5] + ' K'
+        price_text = price_text.split('.')[0]
+        #price_text = price_text[:5] + ' K'
         graphics.DrawText(canvas, font_symbol, 0, 6, main_color, crypto_symbol)
         graphics.DrawText(canvas, font_price, 0, 16, change_color, price_text)
         # graphics.DrawText(
